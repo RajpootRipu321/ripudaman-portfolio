@@ -1,72 +1,53 @@
-const timeline = [
-  {
-    year: "2019",
-    title: "Class 10",
-    description:
-      "Completed secondary education with a strong academic foundation and developed interest in technology.",
-  },
-  {
-    year: "2021",
-    title: "Class 12",
-    description:
-      "Completed higher secondary education and decided to pursue Computer Science Engineering.",
-  },
-  {
-    year: "2022",
-    title: "Started B.Tech",
-    description:
-      "Began Computer Science Engineering journey and learned programming fundamentals.",
-  },
-  {
-    year: "2023",
-    title: "Java Development",
-    description:
-      "Focused on Java, OOP, DBMS, SQL, JDBC, Git, and software engineering concepts.",
-  },
-  {
-    year: "2024",
-    title: "Spring Boot & APIs",
-    description:
-      "Built REST APIs, learned Spring Boot, Hibernate, authentication, and backend architecture.",
-  },
-  {
-    year: "2025",
-    title: "Real Projects",
-    description:
-      "Developed Banking System, Payroll Management, Utility Billing Backend, Wallet Transaction System, Finance Dashboard, and E-commerce Backend.",
-  },
-];
-
 export default function Timeline() {
-  return (
-    <section
-      id="journey"
-      className="mx-auto max-w-6xl px-6 py-24"
-    >
-      <p className="uppercase tracking-[0.3em] text-cyan-400 mb-3">
-        My Journey
-      </p>
+  const timeline = [
+    {
+      year: "10th Standard",
+      desc: "Built a strong academic foundation and developed an interest in computers and technology."
+    },
+    {
+      year: "12th Standard",
+      desc: "Focused on science and mathematics while preparing for engineering studies."
+    },
+    {
+      year: "B.Tech Year 1",
+      desc: "Learned C programming, basic Java, HTML, CSS and problem solving fundamentals."
+    },
+    {
+      year: "B.Tech Year 2",
+      desc: "Studied Data Structures, DBMS, OOP and SQL while building academic projects."
+    },
+    {
+      year: "B.Tech Year 3",
+      desc: "Developed Spring Boot applications, REST APIs and MySQL database projects."
+    },
+    {
+      year: "Java Backend Developer",
+      desc: "Created Banking System, Payroll Management, Utility Billing and AI-integrated backend applications."
+    },
+    {
+      year: "NCC Air Wing",
+      desc: "Completed NCC Air Wing training and earned the C Certificate while developing discipline and leadership."
+    },
+    {
+      year: "State Volleyball",
+      desc: "Represented at state level as a volleyball player and strengthened teamwork and resilience."
+    }
+  ];
 
-      <h2 className="mb-14 text-5xl font-black">
-        Learning Timeline
+  return (
+    <section id="journey" className="py-24 px-8 max-w-6xl mx-auto">
+      <h2 className="text-5xl font-bold text-center mb-16 text-cyan-400">
+        My Journey
       </h2>
 
-      <div className="border-l-2 border-cyan-500 pl-8">
+      <div className="space-y-8">
         {timeline.map((item) => (
-          <div key={item.year} className="relative mb-12">
-            <div className="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-cyan-400"></div>
-
-            <p className="text-cyan-400 font-bold">
-              {item.year}
-            </p>
-
-            <h3 className="mt-2 text-2xl font-bold">
-              {item.title}
-            </h3>
-
-            <p className="mt-3 text-slate-400 leading-7">
-              {item.description}
-            </p>
+          <div
+            key={item.year}
+            className="border border-cyan-500/30 rounded-xl p-6 hover:scale-[1.02] transition"
+          >
+            <h3 className="text-2xl font-bold">{item.year}</h3>
+            <p className="text-gray-300 mt-2">{item.desc}</p>
           </div>
         ))}
       </div>

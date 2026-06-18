@@ -1,35 +1,48 @@
 export default function Navbar() {
-  const links = [
-    { name: "About", href: "#about" },
-    { name: "Journey", href: "#journey" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Contact", href: "#contact" },
-  ];
-
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#050816]/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a
-          href="#"
-          className="text-2xl font-extrabold text-cyan-400 transition hover:text-cyan-300"
-        >
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#050816]/80 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-5">
+        <h1 className="text-2xl font-bold text-cyan-400">
           Ripudaman Singh
-        </a>
+        </h1>
 
-        <ul className="hidden items-center gap-6 md:flex">
-          {links.map((link) => (
-            <li key={link.name}>
-              <a
-                href={link.href}
-                className="text-sm text-slate-300 transition hover:text-cyan-400"
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+        <div className="flex gap-6 text-white">
+          <a href="#journey" className="hover:text-cyan-400">
+            Journey
+          </a>
+
+          <a href="#projects" className="hover:text-cyan-400">
+            Projects
+          </a>
+
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400"
+          >
+            Resume
+          </a>
+
+          <a
+            href="https://github.com/RajpootRipu321"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ripudaman-singh-023685242"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </nav>
   );
 }

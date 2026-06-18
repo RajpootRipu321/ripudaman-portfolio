@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <>
       <Navbar />
-
       <main className="bg-[#050816] text-white">
         <Hero />
         <About />

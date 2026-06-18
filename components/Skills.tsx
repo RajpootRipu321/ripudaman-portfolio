@@ -1,34 +1,30 @@
-const skills = [
-  "Java",
-  "Spring Boot",
-  "REST APIs",
-  "MySQL",
-  "Hibernate",
-  "JDBC",
-  "Spring Security",
-  "Git",
-  "GitHub",
-  "Postman",
-  "SQL",
-  "Python",
-];
-
 export default function Skills() {
-  return (
-    <section id="skills" className="py-24 px-6 max-w-7xl mx-auto">
-      <p className="uppercase tracking-[0.3em] text-cyan-400 mb-3">
-        Tech Stack
-      </p>
+  const skills = [
+    "Java",
+    "Spring Boot",
+    "REST APIs",
+    "Spring Security",
+    "Hibernate",
+    "JDBC",
+    "MySQL",
+    "Git",
+    "GitHub",
+    "Next.js",
+    "React",
+    "Tailwind CSS"
+  ];
 
-      <h2 className="text-5xl font-black mb-12">
-        Skills
+  return (
+    <section className="py-24 px-8 max-w-6xl mx-auto">
+      <h2 className="text-5xl font-bold text-center mb-16 text-cyan-400">
+        Technical Skills
       </h2>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap justify-center gap-5">
         {skills.map((skill) => (
           <div
             key={skill}
-            className="rounded-full border border-cyan-500 bg-cyan-500/10 px-6 py-3 text-cyan-300 transition hover:scale-105"
+            className="px-6 py-3 rounded-full border border-cyan-400 hover:bg-cyan-500 hover:text-black transition"
           >
             {skill}
           </div>

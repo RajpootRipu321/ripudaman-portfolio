@@ -1,42 +1,75 @@
-export default function Hero() {
+export default function Projects() {
+  const projects = [
+    {
+      title: "E-Commerce Backend API",
+      tech: "Java • Spring Boot • Spring Security • JWT • MySQL",
+      description:
+        "RESTful backend for an e-commerce platform featuring authentication, product management, cart operations, order processing, and secure APIs.",
+      github: "https://github.com/RajpootRipu321",
+    },
+    {
+      title: "Online Banking System",
+      tech: "Java • Spring Boot • REST APIs • MySQL",
+      description:
+        "Backend banking application supporting account creation, fund transfers, balance inquiries, and transaction management with a scalable architecture.",
+      github: "https://github.com/RajpootRipu321",
+    },
+    {
+      title: "Payroll Management System",
+      tech: "Java • JDBC • MySQL",
+      description:
+        "Employee payroll solution for salary processing, CRUD operations, and efficient database management using JDBC.",
+      github: "https://github.com/RajpootRipu321",
+    },
+    {
+      title: "Utility Billing System",
+      tech: "Java • Spring Boot • MySQL",
+      description:
+        "Billing platform for consumer record management and automated bill generation using a secure backend.",
+      github: "https://github.com/RajpootRipu321",
+    },
+    {
+      title: "Personal Portfolio",
+      tech: "Next.js • TypeScript • Tailwind CSS",
+      description:
+        "Responsive developer portfolio with resume download, project showcase, career timeline, and modern UI.",
+      github: "https://github.com/RajpootRipu321",
+    },
+  ];
+
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
-      {/* Background glow */}
-      <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
+    <section
+      id="projects"
+      className="max-w-7xl mx-auto py-24 px-6"
+    >
+      <h2 className="text-5xl font-bold text-center mb-14 text-cyan-400">
+        Featured Projects
+      </h2>
 
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <p className="mb-5 tracking-[0.35em] text-cyan-400 uppercase">
-          Welcome to My Portfolio
-        </p>
-
-        <h1 className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-6xl font-black text-transparent md:text-8xl">
-          Ripudaman Singh
-        </h1>
-
-        <h2 className="mt-6 text-2xl font-semibold text-slate-200 md:text-4xl">
-          Java Backend Developer
-        </h2>
-
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-slate-400">
-          I build secure, scalable, and maintainable backend systems using
-          Java, Spring Boot, REST APIs, MySQL, and clean architecture.
-        </p>
-
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="#projects"
-            className="rounded-full bg-cyan-400 px-8 py-3 font-semibold text-slate-950 transition hover:scale-105"
+      <div className="grid md:grid-cols-2 gap-8">
+        {projects.map((project) => (
+          <div
+            key={project.title}
+            className="rounded-2xl border border-cyan-500/20 p-8 bg-[#0d1224] hover:-translate-y-2 hover:border-cyan-400 transition-all duration-300"
           >
-            View Projects
-          </a>
+            <h3 className="text-2xl font-bold">{project.title}</h3>
 
-          <a
-            href="#contact"
-            className="rounded-full border border-cyan-400 px-8 py-3 font-semibold text-cyan-400 transition hover:bg-cyan-400 hover:text-slate-950"
-          >
-            Contact Me
-          </a>
-        </div>
+            <p className="mt-2 text-cyan-400">{project.tech}</p>
+
+            <p className="mt-4 text-gray-300 leading-7">
+              {project.description}
+            </p>
+
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-6 px-5 py-2 rounded-full bg-cyan-500 text-black font-semibold hover:scale-105 transition"
+            >
+              View on GitHub
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   );
